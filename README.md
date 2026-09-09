@@ -22,6 +22,8 @@ logits, cache = model.run_with_cache("The capital of France is")
 print(cache["blocks.0.attn.hook_pattern"].shape)
 ```
 
+`run_with_cache` forwards extra kwargs to the root module, including `names_filter` and `device`. See the `HookedTransformer.run_with_cache` docstring.
+
 See `demos/Main_Demo.ipynb` for the full walkthrough.
 
 ## Docs
